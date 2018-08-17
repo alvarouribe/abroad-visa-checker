@@ -1,0 +1,62 @@
+#Visas para Chile
+Muestra Visa a Australia solo cuando sea Chileno de  18 - 30 y esté en su país natal
+Muestra Visa a Dinamarca solo cuando sea Chileno de  18 - 30 y esté en su país natal
+Muestra Visa a Alemania solo cuando sea Chileno de  18 - 30 y esté en su país natal
+Muestra Visa a Francia solo cuando sea Chileno de  18 - 30 y NO esté en su país natal
+Muestra Visa a República checa solo cuando sea Chileno de 18 - 30 y NO esté en su país natal
+Muestra Visa a Irlanda solo cuando sea Chileno de  18 - 30 y NO esté en su país natal
+Muestra Visa a Suecia solo cuando sea Chileno de  18 - 30 y esté en su país natal
+Muestra Visa a Coreadelsur solo cuando sea Chileno de 18 - 30 y no esté en su país natal
+Muestra Visa a Alianzadelpacífico solo cuando sea Chileno de ,18 - 30,si esté en su país natal
+Muestra Visa a Japón solo cuando sea Chileno de  18 - 30 y NO esté en su país natal
+Muestra Visa a Austria solo cuando sea Chileno de  18 - 30 y NO esté en su país natal
+Muestra Visa a Polonia solo cuando sea Chileno de  18 - 30 y NO esté en su país natal
+Muestra Visa a Nuevazelanda solo cuando sea Chileno de  18 - 35 y esté en su país natal
+Muestra Visa a Hungría solo cuando sea Chileno de  18 - 35 y esté en su país natal
+Muestra Visa a Canadá solo cuando sea Chileno de  18 - 35 y esté en su país natal
+
+como hacerlo?
+opcion 1:
+tener las reglas de cada pais en un json y si cumple genera DOM de visas.
+opcion 2:
+mostrar solo las visas que cumplan las reglas por pais cambiando las clases show or hide
+
+#argentina  
+alemania,18 - 30,si
+australia,18 - 30,si
+dinamarca,18 - 30,no
+holanda,18 - 30,no
+japón,18 - 30,no
+noruega,18 - 30,no
+portugal,18 - 30,no
+suecia,18 - 30,si
+españa,18 - 35,no
+francia,18 - 35,no
+irlanda,18 - 35,no
+nueva zelanda,18 - 35,si
+
+#España
+australia,18-30,si
+nueva zelanda,18-30,si
+japón,18-30,no
+canadá,18-35,si
+
+#Colombia
+france,18-30,no
+"alianza del pacífico (chile, méxico, perú)",18 - 30,si
+
+#Mexico
+canada,18 - 29,si
+"alianza del pacífico (colombia, chile, perú)",18 - 30,si
+nueva zelanda,18 - 30,si
+
+#Peru
+australia,18 - 30,si
+nueva zelanda,18-30,si
+
+#Uruguay
+alemania,18-30,si
+australia,18-30,si
+francia,18-30,si
+suecia,18-30,si
+nueva zelanda,18-35,si
