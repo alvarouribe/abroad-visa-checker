@@ -176,88 +176,8 @@
       <div id="debugDiv"> </div>
     </section> -->
 
-    <!-- <script type="text/javascript" src="data/reglas.js"></script> -->
+    <script type="text/javascript" src="data/reglas.js"></script>
     <script>
-      var reglas = [
-      {
-        "aplicante": "chile",
-        "visas": [
-          { "pais": "australia", "min":18, "max":30, "en-pais-de-origen": "si" },
-          { "pais": "dinamarca", "min": 18, "max": 30, "en-pais-de-origen": "si"  },
-          { "pais": "alemania", "min": 18, "max": 30, "en-pais-de-origen": "si"  },
-          { "pais": "francia", "min": 18, "max": 30, "en-pais-de-origen": "no"  },
-          { "pais": "republica checa", "min": 18, "max": 30, "en-pais-de-origen": "no"  },
-          { "pais": "irlanda", "min": 18, "max": 30, "en-pais-de-origen": "no"  },
-          { "pais": "suecia", "min": 18, "max": 30, "en-pais-de-origen": "si"  },
-          { "pais": "corea del sur", "min": 18, "max": 30, "en-pais-de-origen": "no"  },
-          { "pais": "portugal", "min": 18, "max": 30, "en-pais-de-origen": "no"  },
-          { "pais": "alianza del pacífico", "min": 18, "max": 30, "en-pais-de-origen": "si"  },
-          { "pais": "japón", "min": 18, "max": 30, "en-pais-de-origen": "no"  },
-          { "pais": "austria", "min": 18, "max": 30, "en-pais-de-origen": "no"  },
-          { "pais": "polonia", "min": 18, "max": 30, "en-pais-de-origen": "no"  },
-          { "pais": "nueva zelanda", "min": 18, "max": 35, "en-pais-de-origen": "si"  },
-          { "pais": "hungría", "min": 18, "max": 35, "en-pais-de-origen": "si"  },
-          { "pais": "canadá", "min": 18, "max": 35, "en-pais-de-origen": "si" }
-        ]
-      },
-      {
-        "aplicante": "argentina",
-        "visas": [
-          { "pais": "alemania", "min": 18, "max": 30, "en-pais-de-origen": "si" },
-          { "pais": "australia", "min": 18, "max": 30, "en-pais-de-origen": "si" },
-          { "pais": "dinamarca", "min": 18, "max": 30, "en-pais-de-origen": "no" },
-          { "pais": "holanda", "min": 18, "max": 30, "en-pais-de-origen": "no" },
-          { "pais": "japón", "min": 18, "max": 30, "en-pais-de-origen": "no" },
-          { "pais": "noruega", "min": 18, "max": 30, "en-pais-de-origen": "no" },
-          { "pais": "portugal", "min": 18, "max": 30, "en-pais-de-origen": "no" },
-          { "pais": "suecia", "min": 18, "max": 30, "en-pais-de-origen": "si" },
-          { "pais": "españa", "min": 18, "max": 35, "en-pais-de-origen": "no" },
-          { "pais": "francia", "min": 18, "max": 35, "en-pais-de-origen": "no" },
-          { "pais": "irlanda", "min": 18, "max": 35, "en-pais-de-origen": "no" },
-          { "pais": "nueva zelanda", "min": 18, "max": 35, "en-pais-de-origen": "si" }
-        ]
-      },
-      {
-        "aplicante": "España",
-        "visas": [
-          { "pais": "australia", "min": 18, "max": 30, "en-pais-de-origen": "si" },
-          { "pais": "nueva zelanda", "min": 18, "max": 30, "en-pais-de-origen": "si" },
-          { "pais": "japón", "min": 18, "max": 30, "en-pais-de-origen": "no" },
-          { "pais": "canadá", "min": 18, "max": 35, "en-pais-de-origen": "si" }
-        ]
-      },
-
-      {
-        "aplicante": "Colombia",
-        "visas": [ 
-          {"pais": "francia", "min": 18, "max": 30, "en-pais-de-origen": "no" },
-          {"pais": "alianza del pacífico chile méxico perú", "min": 18, "max": 30, "en-pais-de-origen": "si" }
-        ]
-      },
-      {
-        "aplicante": "México",
-        "visas": [ 
-          {"pais": "nueva zelanda", "min": 18, "max": 30, "en-pais-de-origen": "si"}
-        ]
-      },
-      {
-        "aplicante": "Perú",
-        "visas": [ 
-          {"pais": "australia", "min": 18, "max": 30, "en-pais-de-origen": "si" },
-          {"pais": "nueva zelanda", "min": 18, "max": 30, "en-pais-de-origen": "si"}
-        ]
-      },
-      {
-        "aplicante": "Uruguay",
-        "visas": [ 
-          {"pais": "alemania", "min": 18, "max": 30, "en-pais-de-origen": "si" },
-          {"pais": "australia", "min": 18, "max":30, "en-pais-de-origen": "si" },
-          {"pais": "francia", "min": 18, "max":30, "en-pais-de-origen": "si" },
-          {"pais": "suecia", "min": 18, "max":30, "en-pais-de-origen": "si" },
-          {"pais": "nueva zelanda","min":18, "max":35, "en-pais-de-origen": "si" }
-        ]
-      }];
-
       function comprobarVisas() {
         console.clear();
         var sectionVisasDisp = document.getElementById('visas-disponibles')
@@ -282,11 +202,11 @@
 
         //LOOP para filtrar pais 
         //TODO: ESTE LO PODRIAMOS MODIFICAR PARA SOLO PONER reglas[key][paisNatal] creo...
-        for (var key in reglas) {
-          if (reglas.hasOwnProperty(key)) {
+        for (var key in reglasCotizador) {
+          if (reglasCotizador.hasOwnProperty(key)) {
 
-            // Una vez encontrada las reglas del pais seleccionado filtramos
-            if (reglas[key].aplicante.toLowerCase() === paisNatal) {
+            // Una vez encontrada las reglasCotizador del pais seleccionado filtramos
+            if (reglasCotizador[key].aplicante.toLowerCase() === paisNatal) {
 
               //DEBUG DIV
               // debugDiv.innerHTML += "paisNatal: " + paisNatal + "<br>";
@@ -294,62 +214,57 @@
               // debugDiv.innerHTML += "en pais de origen: " + aplicaDesdeExterior.toLowerCase() + "<br>";
               //DEBUG DIV
               
-              var opcionesDeVisas = reglas[key].visas;
+              var opcionesDeVisas = reglasCotizador[key].visas;
               //Loop
               for (let i = 0; i < opcionesDeVisas.length; i++) {
                 const VISA = opcionesDeVisas[i];
                 var aprobada = false;
-                // console.log('? pais',VISA['pais']);
-                // console.log('aplicaDesdeExterior?',aplicaDesdeExterior);
-                // console.log('VISA',VISA);
-                // if (VISA['pais']=='francia') {
-                //   console.log(VISA['pais']);
-                // }
-                console.log('soy '+reglas[key].aplicante+' aplico desde el exterior:'+ aplicaDesdeExterior);
-                // IF aplicaDesdeExterior === si entonces no hacemos este filtro VISA['en-pais-de-origen'] === aplicaDesdeExterior
-                if ( aplicaDesdeExterior === 'si' && (edad >= VISA['min'] && edad <= VISA['max']) ) {
-                  aprobada = true;
-                }
-                if ( aplicaDesdeExterior === 'no' && (VISA['en-pais-de-origen'] === aplicaDesdeExterior) && (edad >= VISA['min'] && edad <= VISA['max']) ) {
-                  aprobada = true;
-                }
 
-                if (aprobada) {
-                  console.log('visa ['+VISA['pais']+']aprobada');
-                  // Creamos la visa, con su imagen, titulo y link pdf
+                if (edad >= VISA['min'] && edad <= VISA['max']) {
                   
-                  var nombrePais = VISA['pais'];
-                  var etiqueta = VISA['pais'].split(" ").join(""); 
-                  etiqueta = str2slug(etiqueta);
-                  // elimina espacios y modifica acentos y simbolos para usarla en 
-                  // Nombre de imagen y archivo pdf 
-                  // ej: corea del sur ==> coreadelsur
-                  
-                  // Crea <li> y <a href target>
-                  var li = document.createElement("li");
-                  var link = document.createElement('a');
-                  link.setAttribute('href','visas/' + etiqueta + '.pdf');
-                  link.setAttribute('target','_blank');
+                  console.log('soy '+reglasCotizador[key].aplicante+' aplico desde el exterior:'+ aplicaDesdeExterior);
 
-                  // Crea <h3> con Nombre del pais desde las reglas
-                  var h3 =  document.createElement('h3');
-                  var txtnodeh3 = document.createTextNode(nombrePais);
-                  h3.appendChild(txtnodeh3);
+                  if ( aplicaDesdeExterior === 'no' ) { //ESTO ESTÁ BIEN NO CAMBIAR
+                    aprobada = true;
+                  }
 
-                  // Crea <img>
-                  var img = document.createElement('img');
-                  img.setAttribute('src', 'imagenes/'+ etiqueta+'.jpg');
-                  img.setAttribute('alt', etiqueta);
+                  if ( aplicaDesdeExterior === 'si' && (VISA['en-pais-de-origen'].toLowerCase() === 'si') ) {
+                    aprobada = true;
+                  }
 
-                  // Agregamos a ul
-                  link.appendChild(h3);
-                  link.appendChild(img);
-                  li.appendChild(link);
-                  ulVisas.appendChild(li);
-                }
+                  if (aprobada) {
+                    console.log('visa ['+VISA['pais']+']aprobada');
+                    // Creamos la visa, con su imagen, titulo y link pdf
+                    
+                    var nombrePais = VISA['pais'];
+                    var etiqueta = VISA['pais'].split(" ").join(""); 
+                    etiqueta = str2slug(etiqueta);
+
+                    // Crea <li> y <a href target>
+                    var li = document.createElement("li");
+                    var link = document.createElement('a');
+                    link.setAttribute('href','visas/' + etiqueta + '.pdf');
+                    link.setAttribute('target','_blank');
+
+                    // Crea <h3> con Nombre del pais desde las reglas
+                    var h3 =  document.createElement('h3');
+                    var txtnodeh3 = document.createTextNode(nombrePais);
+                    h3.appendChild(txtnodeh3);
+
+                    // Crea <img>
+                    var img = document.createElement('img');
+                    img.setAttribute('src', 'imagenes/'+ etiqueta+'.jpg');
+                    img.setAttribute('alt', etiqueta);
+
+                    // Agregamos a ul
+                    link.appendChild(h3);
+                    link.appendChild(img);
+                    li.appendChild(link);
+                    ulVisas.appendChild(li);
+                  }
+                }              
               }
             }
-
           }
         }
         
@@ -360,7 +275,11 @@
         h2.appendChild(txtnodeh2);
         sectionVisasDisp.prepend(h2);
       }
-    
+      /* str2slug(str)
+         Elimina espacios y modifica acentos y simbolos para usarla en 
+         Nombre de imagen y archivo pdf 
+         ej: corea del sur ==> coreadelsur
+      */
       function str2slug(str) {
         var rep = '_';
         str = str.toLowerCase()
