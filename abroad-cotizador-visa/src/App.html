@@ -201,7 +201,15 @@ aplicaDesdeExterior: {aplicaDesdeExterior}  -->
 		// },
 		oncreate() {
 			document.title = 'Working Holiday Visas';
-		// 	console.log('this.options', this.options);
+			console.log('this.options', this.options);
+
+			var reglasJSON = 'https://flyingdolly.co.nz/abroad/reglas.json'      
+			fetch(reglasJSON)
+				.then(res => res.json())
+				.then(data => {
+					console.log(data)
+					this.set({reglas: data})
+				});
 		},
 		helpers: {
 			str2slug(str) {
