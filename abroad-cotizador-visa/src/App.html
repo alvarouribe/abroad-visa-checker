@@ -20,13 +20,14 @@
 	#visas-disponibles ul li { 
 		width: 405px;
 		height: 330px;
-		/* display: inline-block; */
 		list-style-type: none;
-		/* overflow: hidden; */
 	}
-	#visas-disponibles ul li a { 
+	#visas-disponibles ul li:hover { 
 		cursor: pointer;
 	}
+	/* #visas-disponibles ul li a { 
+		cursor: pointer;
+	} */
 	h1, h2, h3 {
 		font-family: lobster;
 	}
@@ -178,11 +179,11 @@ aplicaDesdeExterior: {aplicaDesdeExterior}  -->
 				{#each regla.visas as visa}
 					{#if ( (edad >= visa.min) && (edad <= visa.max) ) }
 						{#if ( aplicaDesdeExterior === 'no' || ( aplicaDesdeExterior === 'si' && (visa['en-pais-de-origen'].toLowerCase() === 'si')) ) }
-							<li>
-								<a href="./visas/{str2slug(visa.pais)}.pdf" target="_blank">
+							<li onclick="window.open('https://www.abroad-global.com/wh{str2slug(visa.pais)}')">
+								<!-- <a href="./visas/{str2slug(visa.pais)}.pdf" target="_blank"> -->
 									<h3>{ visa.pais }</h3>
 									<img src="./imagenes/{str2slug(visa.pais)}.jpg" alt="{visa.pais}">
-								</a>
+								<!-- </a> -->
 							</li>
 						{/if}
 					{/if}
@@ -201,13 +202,13 @@ aplicaDesdeExterior: {aplicaDesdeExterior}  -->
 		// },
 		oncreate() {
 			document.title = 'Working Holiday Visas';
-			console.log('this.options', this.options);
+			// console.log('this.options', this.options);
 
 			var reglasJSON = 'https://flyingdolly.co.nz/abroad/reglas.json'      
 			fetch(reglasJSON)
 				.then(res => res.json())
 				.then(data => {
-					console.log(data)
+					// console.log(data)
 					this.set({reglas: data})
 				});
 		},
